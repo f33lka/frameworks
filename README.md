@@ -1,4 +1,4 @@
-# Habit Tracker Lite
+# habit tracker lite
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python)](#)
 [![Flask](https://img.shields.io/badge/Flask-3.0-000?logo=flask)](#)
@@ -7,25 +7,25 @@
 [![MUI](https://img.shields.io/badge/MUI-5-007FFF?logo=mui)](#)
 [![Recharts](https://img.shields.io/badge/Recharts-2.x-ff7300)](#)
 
-Трекер привычек: добавляй привычки и отмечай выполнение по дням. График активности за 14 дней.
+трекер привычек: добавляй привычки и отмечай выполнение по дням. График активности за 14 дней.
 
-## 🚀 Быстрый старт
-**Backend**
+## быстрый старт
+**backend**
 ```bash
 cd backend
 python -m venv .venv
 .venv\Scripts\pip install -r requirements.txt
 .venv\Scripts\python app.py
-# Linux/Mac:
+# linux/mac:
 # source .venv/bin/activate && pip install -r requirements.txt && python app.py
 ```
-**Frontend**
+**frontend**
 ```bash
 cd frontend
 npm install
 npm start
 ```
-API: `http://localhost:5000`, UI: `http://localhost:3000`
+api: `http://localhost:5000`, UI: `http://localhost:3000`
 
-## 🔌 API (кратко)
+## api
 `GET/POST/PATCH /api/habits`, `GET/POST/DELETE /api/checkins`, `GET /api/health`
