@@ -1,0 +1,35 @@
+@startuml
+entity User {
+  * id : int <<PK>>
+  --
+  email : string <<unique>>
+  name : string
+  role : string
+  password_hash : string
+  created_at : datetime
+}
+
+entity Project {
+  * id : int <<PK>>
+  --
+  name : string <<unique>>
+  description : text
+  created_at : datetime
+}
+
+entity Defect {
+  * id : int <<PK>>
+  --
+  project_id : int <<FK>>
+  title : string
+  description : text
+  priority : string
+  status : string
+  assignee_id : int <<FK>>
+  created_at : datetime
+  updated_at : datetime
+}
+
+User ||--o{ Defect : assigns >
+Project ||--o{ Defect : has >
+@enduml

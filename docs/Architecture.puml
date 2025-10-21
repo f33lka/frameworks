@@ -1,0 +1,20 @@
+@startuml
+title Архитектура (Flask + React, SQLite absolute path)
+
+package "Client (React)" {
+  [Login] --> [API /auth/login]
+  [Projects] --> [API /projects]
+  [Defects] --> [API /defects]
+  [Reports] --> [API /reports/summary]
+}
+
+package "Server (Flask)" {
+  [Auth BP] --> [JWT]
+  [Projects BP] --> [SQLAlchemy]
+  [Defects BP] --> [SQLAlchemy]
+  [Reports BP] --> [SQLAlchemy]
+}
+
+[SQLAlchemy] --> [SQLite (instance/app.db)]
+
+@enduml
